@@ -1,0 +1,26 @@
+name: pet_repository
+description: The Repo that handles users
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  # equatable: ^2.0.5
+  firebase_auth: ^5.1.0
+  cloud_firestore: ^5.0.1
+  # firebase_storage: ^11.6.0
+  # rxdart: ^0.27.7
+  # path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
