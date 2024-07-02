@@ -1,4 +1,4 @@
-import 'package:pet_repository/src/entities/entities.dart';
+import 'package:user_repository/src/entities/entities.dart';
 
 class MyUser {
   String userId;

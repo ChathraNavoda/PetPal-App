@@ -1,4 +1,4 @@
-name: pet_repository
+name: user_repository
 description: The Repo that handles users
 publish_to: 'none'
 version: 1.0.0+1
@@ -14,7 +14,7 @@ dependencies:
   firebase_auth: ^5.1.0
   cloud_firestore: ^5.0.1
   # firebase_storage: ^11.6.0
-  rxdart: ^0.27.7
+  rxdart: ^0.28.0
   # path: ^1.8.3
 
 dev_dependencies:
