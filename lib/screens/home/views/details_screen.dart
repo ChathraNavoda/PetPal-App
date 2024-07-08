@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:petpal/components/macro.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -98,143 +99,52 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 12,
                     ),
-                    Row(
+                    const Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(2, 2),
-                                  blurRadius: 5,
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    CupertinoIcons.cloud,
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                  ),
-                                  const Text(
-                                    "High quality",
-                                    style: TextStyle(fontSize: 10),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                        MyMacro(
+                          title: 'Net Weight',
+                          value: "400g",
+                          icon: FontAwesomeIcons.dumbbell,
                         ),
-                        const SizedBox(
-                          width: 5,
+                        SizedBox(width: 5),
+                        MyMacro(
+                          title: "Length",
+                          value: '60cm',
+                          icon: FontAwesomeIcons.ruler,
                         ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(2, 2),
-                                  blurRadius: 5,
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    CupertinoIcons.cloud,
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                  ),
-                                  const Text(
-                                    "High quality",
-                                    style: TextStyle(fontSize: 10),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                        SizedBox(width: 5),
+                        MyMacro(
+                          title: "Width",
+                          value: '20cm',
+                          icon: FontAwesomeIcons.ruler,
                         ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(2, 2),
-                                  blurRadius: 5,
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    CupertinoIcons.cloud,
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                  ),
-                                  const Text(
-                                    "High quality",
-                                    style: TextStyle(fontSize: 10),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(2, 2),
-                                  blurRadius: 5,
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    CupertinoIcons.cloud,
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                  ),
-                                  const Text(
-                                    "High quality",
-                                    style: TextStyle(fontSize: 10),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        SizedBox(width: 5),
                       ],
                     ),
+                    const SizedBox(height: 40),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: TextButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                          elevation: 3.0,
+                          backgroundColor: const Color(0xFFD97946),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(60),
+                          ),
+                        ),
+                        child: const Text(
+                          "Buy Now",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -25,6 +25,7 @@ dependencies:
     path: packages/user_repository
   pet_repository:
     path: packages/pet_repository
+  font_awesome_flutter: ^10.7.0
 
  
 
