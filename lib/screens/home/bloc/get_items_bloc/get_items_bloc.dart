@@ -11,7 +11,7 @@ class GetItemsBloc extends Bloc<GetItemsEvent, GetItemsState> {
     on<GetItems>((event, emit) async {
       emit(GetItemsLoading());
       try {
-        List<Item> items = await _itemRepo.getPizzas();
+        List<Item> items = await _itemRepo.getItems();
         emit(GetItemsSuccess(items));
       } catch (e) {
         emit(GetItemsFailure());

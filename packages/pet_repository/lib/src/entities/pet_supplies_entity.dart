@@ -38,8 +38,11 @@ class ItemEntity {
         picture: doc['picture'],
         name: doc['name'],
         description: doc['description'],
-        price: doc['price'],
-        discount: doc['discount'],
+        price:
+            doc['price'] is int ? doc['price'] : (doc['price'] as num).toInt(),
+        discount: doc['discount'] is int
+            ? doc['discount']
+            : (doc['discount'] as num).toInt(),
         macros: Macros.fromEntity(MacrosEntity.fromDocument(doc['macros'])));
   }
 }

@@ -6,7 +6,8 @@ import 'package:pet_repository/pet_supplies_repository.dart';
 class FirebasePetRepo implements ItemRepo {
   final itemsCollection = FirebaseFirestore.instance.collection("items");
 
-  Future<List<Item>> getPizzas() async {
+  @override
+  Future<List<Item>> getItems() async {
     try {
       return await itemsCollection.get().then((value) => value.docs
           .map((e) => Item.fromEntity(ItemEntity.fromDocument(e.data())))

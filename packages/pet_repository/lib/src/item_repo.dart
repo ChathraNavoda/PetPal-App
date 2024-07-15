@@ -1,5 +1,5 @@
 import 'models/models.dart';
 
 abstract class ItemRepo {
-  Future<List<Item>> getPizzas();
+  Future<List<Item>> getItems();
 }
